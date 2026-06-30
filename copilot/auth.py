@@ -56,9 +56,7 @@ def load_auth(
         from .browser import BrowserCopilot
     except ImportError as exc:
         raise RuntimeError(
-            "Playwright is not installed. On a Raspberry Pi or other headless host, "
-            "run `python -m copilot login` on your PC, then copy session/token.json "
-            "(and refresh it when it expires)."
+            "Playwright is not installed. Run `python -m copilot login` on your PC, then copy session/token.json"
         ) from exc
 
     # Try a headless read first: a signed-in profile just needs a fresh token.

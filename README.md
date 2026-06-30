@@ -95,6 +95,8 @@ python -m copilot login
 
 The browser **closes by itself** once sign-in is detected — you don't need to press Enter or close it manually. After sign-in it sends one short warm-up message that mints the chat token **and** passes Cloudflare's "verify you're human" check in the same step (a brief "finishing setup…" appears, and a tiny throwaway chat lands in your history). If a checkbox shows up, click it in that login window. The steps are logged to `session/login.log` if anything goes wrong. That's it: your session is saved under `session/` (git-ignored, never shared) and reused on every run — so your first request works right away.
 
+> **Note:** Playwright requires a display environment and cannot be installed/run on headless systems like Raspberry Pi armv7. On such devices, sign in on a host machine with a display, then copy `session/token.json` to the target device for API-only usage.
+
 > 🛠️ **Run into trouble during setup or your first run?** Head to the [Troubleshooting](#troubleshooting) section, the bundled diagnostic both *fixes* common issues (captcha/clearance) and *logs* a shareable report.
 
 ---

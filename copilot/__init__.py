@@ -29,7 +29,7 @@ __all__ = [
 
 
 def __getattr__(name: str):
-    """Lazy import: Playwright is optional (not available on Raspberry Pi armv7)."""
+    """Lazy import: Playwright is optional."""
     if name == "BrowserCopilot":
         from .browser import BrowserCopilot
         return BrowserCopilot
