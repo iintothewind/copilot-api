@@ -1,0 +1,2 @@
+[permissions]
+allow = ["run_skill", "Bash(git log --oneline -10 2>/dev/null || echo \"No git repo\")", "Bash(find copilot server examples tests -type f -name \"*.py\" | sort)", "Bash(git status && echo \"---\" && git remote -v && echo \"---\" && git branch -a)", "Bash(git fetch origin develop && git checkout -b develop origin/develop)"]

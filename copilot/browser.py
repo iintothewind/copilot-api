@@ -474,7 +474,7 @@ class BrowserCopilot:
         if "appendText" in data or "imageGenerated" in data:
             self._warmup_replied = True
 
-    def _send_warmup(self, text: str = "hi") -> bool:
+    def _send_warmup(self, text: str = "\u200b") -> bool:
         """Send one message through the page composer to mint the chat token.
 
         Returns True if a send was attempted. Federated (Google) sessions only
